@@ -61,7 +61,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Simple fade-in animation for sections
+// Simple fadee in animation for sections
 const observerOptions = {
     threshold: 0.1,
     rootMargin: '0px 0px -50px 0px'
@@ -77,7 +77,6 @@ const observer = new IntersectionObserver((entries) => {
 
 // Add animation class to sections (but don't hide them)
 document.addEventListener('DOMContentLoaded', () => {
-    // Add fade-in class to sections
     document.querySelectorAll('section').forEach(section => {
         section.classList.add('fade-in-section');
         observer.observe(section);
