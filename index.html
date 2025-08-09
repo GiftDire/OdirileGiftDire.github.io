@@ -1,280 +1,409 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Odirile Gift Dire - Software Developer Portfolio showcasing skills in C#, JavaScript, Python, and accessible technology">
-    <meta name="keywords" content="Odirile Gift Dire, Software Developer, C#, JavaScript, Python, React, Rustenburg, South Africa">
-    <meta name="author" content="Odirile Gift Dire">
-    <meta property="og:title" content="Odirile Gift Dire - Software Developer">
-    <meta property="og:description" content="Passionate software developer specializing in accessible technology and modern web development">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://giftdire.github.io">
-    <title>Odirile Gift Dire - Software Developer</title>
-   <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Odirile Gift Dire - Software Developer Portfolio showcasing skills in C#, JavaScript, Python, IoT, and accessible technology." />
+  <meta name="keywords" content="Odirile Gift Dire, Software Developer, C#, JavaScript, Python, React, Rustenburg, South Africa" />
+  <meta name="author" content="Odirile Gift Dire" />
+  <meta property="og:title" content="Odirile Gift Dire - Software Developer" />
+  <meta property="og:description" content="Passionate software developer specializing in accessible technology, IoT, and modern web development." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://giftdire.github.io/OdirileGiftDire.github.io/" />
+  <meta name="theme-color" content="#6366f1" />
+  <title>Odirile Gift Dire — Software Developer</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
- 
-    <div class="bg-animation"></div>
-    <div class="float-element"></div>
-    <div class="float-element"></div>
-    <div class="float-element"></div>
-    <nav id="navbar">
-        <div class="nav-container">
-            <div class="logo">OGD</div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <div class="mobile-menu-toggle" id="mobile-menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+  <!-- Background + Floaters -->
+  <div class="bg-animation" aria-hidden="true"></div>
+  <div class="float-element"></div>
+  <div class="float-element"></div>
+  <div class="float-element"></div>
+
+  <!-- Skip link -->
+  <a class="skip-link" href="#home">Skip to content</a>
+
+  <!-- Navbar -->
+  <nav id="navbar" class="nav" aria-label="Primary">
+    <div class="nav-container">
+      <a class="logo" href="#home" aria-label="Go to home">OGD</a>
+      <ul class="nav-links">
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#education" class="nav-link">Education</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <button id="mobile-menu" class="mobile-menu-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Nav -->
+  <div class="mobile-nav" id="mobile-nav" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+    <ul>
+      <li><a href="#home" class="mobile-link">Home</a></li>
+      <li><a href="#about" class="mobile-link">About</a></li>
+      <li><a href="#skills" class="mobile-link">Skills</a></li>
+      <li><a href="#projects" class="mobile-link">Projects</a></li>
+      <li><a href="#experience" class="mobile-link">Experience</a></li>
+      <li><a href="#education" class="mobile-link">Education</a></li>
+      <li><a href="#contact" class="mobile-link">Contact</a></li>
+    </ul>
+  </div>
+
+  <main id="home" class="hero">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1>Odirile Gift Dire</h1>
+        <p>Software Developer</p>
+        <div class="cta-buttons">
+          <a href="#contact" class="btn btn-primary"><span>Get In Touch</span><span>→</span></a>
+          <a href="https://github.com/GiftDire" target="_blank" rel="noopener" class="btn btn-secondary"><span>View GitHub</span><span>↗</span></a>
+          <a href="cv/ODIRILE GIFT DIRE RESUME CV LATEST 2-1.pdf" download class="btn btn-download"><span>Download CV</span><span>📄</span></a>
+          <button class="btn btn-secondary btn-outline" id="download-transcript"> <span>Download Transcript</span><span>🔒</span></button>
+
         </div>
-    </nav>
-    <div class="mobile-nav" id="mobile-nav">
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+      </div>
+      
+<div class="code-card card-neo" id="code-card" data-tilt aria-hidden="true">
+  <div class="code-header">
+    <span></span><span></span><span></span>
+    <div class="code-title"></div>
+  </div>
+
+  <pre class="code-body"><code id="codeBlock">
+  const developer = {
+  name: 'Odirile Gift Dire',
+  stack: ['C#','.NET', 'JavaScript', 'Python', 'Front-end',
+  'Docker'],
+  currently: 'Open to Software Development Graduate Programmes
+  /Junior Software Developer roles',
+  location: 'Pretoria, ZA'
+};
+  </code><span class="caret" aria-hidden="true"></span></pre>
+</div>
+
+      
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- About -->
+  <section id="about">
+    <h2 class="section-title">About Me</h2>
+    <div class="about-content">
+      <p>I am a dedicated and resilient Information Technology student currently in my final year of a bachelor's degree, with a proven track record of academic excellence and hands-on experience in both local and international settings.</p>
+      <p>Selected for the prestigious Global Minor program, I studied at four leading European universities, collaborating with diverse teams on innovative projects aimed at empowering people with disabilities in the workplace. Our work included developing a Chrome extension for visually impaired users, a foot mouse for individuals without hands, and a voice recognition navigator.</p>
+      <p>I have gained practical experience working with startups such as Steera App and freelancing for three additional startups, further strengthening my skills in C#, JavaScript, Python, and front-end development. Known for my strong work ethic, adaptability, and collaborative spirit.</p>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills">
+    <h2 class="section-title">Skills & Technologies</h2>
+    <div class="skills-grid">
+      <div class="skill-card"><span class="skill-icon">💻</span><h3>C#</h3></div>
+      <div class="skill-card"><span class="skill-icon">🌐</span><h3>JavaScript</h3></div>
+      <div class="skill-card"><span class="skill-icon">🐍</span><h3>Python</h3></div>
+      <div class="skill-card"><span class="skill-icon">⚛️</span><h3>React</h3></div>
+      <div class="skill-card"><span class="skill-icon">🎨</span><h3>HTML/CSS</h3></div>
+      <div class="skill-card"><span class="skill-icon">🗄️</span><h3>MySQL</h3></div>
+      <div class="skill-card"><span class="skill-icon">📊</span><h3>SQL</h3></div>
+      <div class="skill-card"><span class="skill-icon">🗃️</span><h3>MSSQL</h3></div>
+      <div class="skill-card"><span class="skill-icon">🍃</span><h3>MongoDB</h3></div>
+      <div class="skill-card"><span class="skill-icon">🔧</span><h3>.NET</h3></div>
+      <div class="skill-card"><span class="skill-icon">🌿</span><h3>Git</h3></div>
+      <div class="skill-card"><span class="skill-icon">🤖</span><h3>AI</h3></div>
+      <div class="skill-card"><span class="skill-icon">🔒</span><h3>Cybersecurity</h3></div>
+      <div class="skill-card"><span class="skill-icon">📡</span><h3>IoT</h3></div>
+      <div class="skill-card"><span class="skill-icon">🎯</span><h3>UX/UI</h3></div>
+      <div class="skill-card"><span class="skill-icon">🐳</span><h3>Docker</h3></div>
+      <div class="skill-card"><span class="skill-icon">🟢</span><h3>Node.js</h3></div>
+      <div class="skill-card"><span class="skill-icon">🚏</span><h3>Express</h3></div>
+
+
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects">
+    <h2 class="section-title">Projects</h2>
+    <div class="projects-grid">
+      <!-- Project 1 -->
+      <article class="project card-neo" data-tilt>
+        <img class="project-thumb" src="images/1 (2).png" alt="IoT Call for Help system (ESP32 + Node-RED)" loading="lazy" />
+        <div class="project-body">
+          <h3 class="project-title">Call for Help – IoT Alert System</h3>
+          <p class="project-desc">
+            ESP32 button triggers alerts to responder devices (buzzer + OLED). Built with IoT Empower & Node-RED. Dynamic MQTT topics link many buttons ↔ responders. Voice activation via Voice2JSON.
+          </p>
+          <ul class="project-tech">
+            <li>ESP32</li><li>MQTT</li><li>Node-RED</li><li>IoT Empower</li><li>OLED</li>
+          </ul>
+          <div class="project-links">
+            <a class="btn btn-primary" href="https://github.com/FlorianRakos/IoT-NotCapricorns/tree/main/Gift" target="_blank" rel="noopener">GitHub ↗</a>
+          </div>
+        </div>
+      </article>
+      <!-- Invoice Management (ASP.NET Core) -->
+<article class="project card-neo" data-tilt>
+  <img class="project-thumb" src="images/2 (2).png" alt="Invoice Management Web App" loading="lazy" />
+  <div class="project-body">
+    <h3 class="project-title">Invoice Management – ASP.NET Core</h3>
+    <p class="project-desc">CRUD invoices, customers, and payments with Razor Pages and SQL Server. Clean layers and validation.</p>
+    <ul class="project-tech"><li>ASP.NET Core</li><li>Razor Pages</li><li>SQL Server</li></ul>
+    <div class="project-links">
+      <a class="btn btn-primary" href="https://github.com/GiftDire/Invoice-Management-Web-Application" target="_blank" rel="noopener">GitHub ↗</a>
+    </div>
+  </div>
+</article>
+
+<!-- Blazor WASM -->
+<article class="project card-neo" data-tilt>
+  <img class="project-thumb" src="images/3 (2).png" alt="Blazor WebAssembly Application" loading="lazy" />
+  <div class="project-body">
+    <h3 class="project-title">Blazor WebAssembly – Secure App</h3>
+    <p class="project-desc">Blazor WASM front-end + ASP.NET Web API with Identity for authz/authn and protected routes.</p>
+    <ul class="project-tech"><li>Blazor WASM</li><li>ASP.NET Web API</li><li>Identity</li></ul>
+    <div class="project-links">
+      <a class="btn btn-primary" href="https://github.com/GiftDire/Blazor-web-Assembly-Application" target="_blank" rel="noopener">GitHub ↗</a>
+    </div>
+  </div>
+</article>
+
+<!-- Student Manager (WinForms) -->
+<article class="project card-neo" data-tilt>
+  <img class="project-thumb" src="images/4 (2).png" alt="Student Management Windows Forms" loading="lazy" />
+  <div class="project-body">
+    <h3 class="project-title">Student Manager – Windows Forms</h3>
+    <p class="project-desc">Desktop CRUD for student records (text-file storage), search/filter, and basic reporting.</p>
+    <ul class="project-tech"><li>C#</li><li>Windows Forms</li></ul>
+    <div class="project-links">
+      <a class="btn btn-primary" href="https://github.com/GiftDire/Student-Management-System-using-Windows-Forms_LLG" target="_blank" rel="noopener">GitHub ↗</a>
+    </div>
+  </div>
+</article>
+
+<!-- Color Filter Extension -->
+<article class="project card-neo" data-tilt>
+  <img class="project-thumb" src="images/5.jpg" alt="Color Filter Accessibility Extension" loading="lazy" />
+  <div class="project-body">
+    <h3 class="project-title">Color Filter – Accessibility Extension</h3>
+    <p class="project-desc">Grayscale, invert, and high-contrast modes to aid color-blind users; lightweight and easy to toggle.</p>
+    <ul class="project-tech"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+    <div class="project-links">
+      <a class="btn btn-primary" href="https://github.com/GiftDire/Color-filter-extension" target="_blank" rel="noopener">GitHub ↗</a>
+    </div>
+  </div>
+</article>
+
+<!-- Instagram Follower Analyzer -->
+<article class="project card-neo" data-tilt>
+  <img class="project-thumb" src="images/6 (2).png" alt="Instagram Follower Analyzer web app" loading="lazy" />
+  <div class="project-body">
+    <h3 class="project-title">Instagram Follower Analyzer</h3>
+    <p class="project-desc">Privacy-focused tool to identify non-followers/mutuals and manage insights on your account.</p>
+    <ul class="project-tech"><li>JavaScript</li><li>Web</li></ul>
+    <div class="project-links">
+      <a class="btn btn-primary" href="https://github.com/GiftDire/Instagram_follower_analyzer" target="_blank" rel="noopener">GitHub ↗</a>
+    </div>
+  </div>
+</article>
+
+<!-- Community Portal (use your 2nd screenshot here) -->
+<article class="project card-neo" data-tilt>
+  <img class="project-thumb" src="images/7 (2).png" data-pos="top" alt="Dynamic Community Portal using Node.js, Express, EJS" loading="lazy" />
+  <div class="project-body">
+    <h3 class="project-title">Community Portal – Node + Express + EJS</h3>
+    <p class="project-desc">Dynamic pages, forms, and modular routes. EJS templating with clean MVC-ish structure.</p>
+    <ul class="project-tech"><li>Node.js</li><li>Express</li><li>EJS</li></ul>
+    <div class="project-links">
+      <a class="btn btn-primary" href="https://github.com/GiftDire/Dynamic-Community-Portal-Website-using-Node.js-Express-EJS" target="_blank" rel="noopener">GitHub ↗</a>
+    </div>
+  </div>
+</article>
+
+<!-- UbuntuTutor (3rd screenshot) — Coming soon -->
+<article class="project card-neo coming" data-tilt>
+  <img class="project-thumb" src="images/8 (2).png" alt="UbuntuTutor AI Teaching Assistant" loading="lazy" />
+  <div class="project-body">
+    <h3 class="project-title">UbuntuTutor – AI Teaching Assistant <span class="status-badge">Coming soon</span></h3>
+    <p class="project-desc">AI assistant for Innovation Management using Google AI Studio (Gemini). Explains concepts, frameworks, and examples.</p>
+    <ul class="project-tech"><li>Gemini API</li><li>Node/TS</li><li>RAG (planned)</li></ul>
+    <div class="project-links">
+      <a class="btn btn-secondary disabled" href="https://github.com/GiftDire/UbuntuTutor" target="_blank" rel="noopener" aria-disabled="true">Repo incoming</a>
+    </div>
+  </div>
+</article>
+<!-- Graduate Programme Scraper — Coming soon -->
+<article class="project card-neo coming" data-tilt>
+  <img
+    class="project-thumb"
+    src="images/9.jpg"
+    alt="Graduate Programme Scraper (coming soon)"
+    loading="lazy"
+    data-fit="contain"
+  />
+  <div class="project-body">
+    <h3 class="project-title">
+      Graduate Programme Scraper
+      <span class="status-badge">Coming soon</span>
+    </h3>
+    <p class="project-desc">
+      Python tool to aggregate SA graduate & internship postings, normalize fields,
+      and export CSV/JSON with optional scheduled runs.
+    </p>
+    <ul class="project-tech">
+      <li>Python</li><li>Playwright/BS4</li><li>Pandas</li><li>ChromeDrivers</li>
+    </ul>
+    <div class="project-links">
+      <a class="btn btn-secondary disabled" href="#" aria-disabled="true">Repo incoming</a>
+    </div>
+  </div>
+</article>
+
+<!-- MQTT Starter (Mosquitto + Web Client + ESP32/Wokwi) — Coming soon -->
+<article class="project card-neo coming" data-tilt>
+  <img
+    class="project-thumb"
+    src="images/10.png"
+    alt="MQTT Starter stack (coming soon)"
+    loading="lazy"
+    data-fit="contain"
+  />
+  <div class="project-body">
+    <h3 class="project-title">
+      MQTT Starter – Mosquitto + Web Client + ESP32
+      <span class="status-badge">Coming soon</span>
+    </h3>
+    <p class="project-desc">
+      Dockerized Mosquitto (1883/9001), browser client using mqtt.js, and ESP32 firmware
+      with Wokwi sim for quick IoT demos.
+    </p>
+    <ul class="project-tech">
+      <li>Docker</li><li>Mosquitto</li><li>MQTT</li><li>WebSockets</li><li>ESP32</li>
+    </ul>
+    <div class="project-links">
+      <a class="btn btn-secondary disabled" href="#" aria-disabled="true">Repo incoming</a>
+    </div>
+  </div>
+</article>
+
+
+
+      <!-- Duplicate the <article> block for more projects -->
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section id="experience">
+    <h2 class="section-title">Experience</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h3>Software Developer</h3>
+          <h4>Steera App | Johannesburg</h4>
+          <p class="timeline-date">08/2023 - 09/2024</p>
+          <p>Contributed to Steera app development, working with Google services, Huawei services, and APIs. Integrated web services, WhatsApp, and USSD functionality.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h3>Software Developer Freelancer</h3>
+          <h4>Multiple Startups | Johannesburg</h4>
+          <p class="timeline-date">11/2023 - Present</p>
+          <p>Oversaw integration of multiple chatbots into client platforms. Automated responses and system functions. Set up API connections and web development.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section id="education">
+    <h2 class="section-title">Education</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h3>Bachelor of Information Technology</h3>
+          <h4>Belgium Campus ITversity | Pretoria</h4>
+          <p class="timeline-date">Expected: 12/2025</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h3>Diploma in Information Technology</h3>
+          <h4>Belgium Campus ITversity | Pretoria</h4>
+          <p class="timeline-date">Completed: 12/2023 | Cum Laude 70+</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h3>International Global Minor Programme</h3>
+          <h4>4 European Universities</h4>
+          <p class="timeline-date">01/2024</p>
+          <ul class="education-list">
+            <li>Hogeschool PXL, Belgium - AI</li>
+            <li>Fontys University, Netherlands - Cybersecurity</li>
+            <li>University of Applied Sciences, Austria - IoT</li>
+            <li>Universitat de Lleida, Spain - UX/UI</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2 class="section-title">Get In Touch</h2>
+    <div class="contact-grid">
+      <a href="tel:0745731445" class="contact-card"><div class="contact-icon">📱</div><h3>Phone</h3><p>074 573 1445</p></a>
+      <a href="mailto:Direodirile95@gmail.com" class="contact-card"><div class="contact-icon">✉️</div><h3>Email</h3><p>Direodirile95@gmail.com</p></a>
+      <a href="https://www.linkedin.com/in/odirile-dire-20144a239/" target="_blank" rel="noopener" class="contact-card"><div class="contact-icon">💼</div><h3>LinkedIn</h3><p>Connect with me</p></a>
+      <div class="contact-card"><div class="contact-icon">📍</div><h3>Location</h3><p>Pretoria, GA</p></div>
     </div>
 
-  
-    <section class="hero" id="home">
-        <div class="hero-content">
-            <div class="hero-text">
-                <h1>Odirile Gift Dire</h1>
-                <p>Software Developer</p>
-                <div class="cta-buttons">
-                    <a href="#contact" class="btn btn-primary">
-                        <span>Get In Touch</span>
-                        <span>→</span>
-                    </a>
-                    <a href="https://github.com/GiftDire" target="_blank" class="btn btn-secondary">
-                        <span>View GitHub</span>
-                        <span>↗</span>
-                    </a>
-                    <a href="cv/ODIRILE GIFT DIRE RESUME CV LATEST 2-1.pdf" download class="btn btn-download">
-                        <span>Download CV</span>
-                        <span>📄</span>
-                    </a>
-                </div>
-            </div>
-            <div class="hero-visual">
-                <div class="code-window">
-                    <div class="window-header">
-                        <div class="window-dot"></div>
-                        <div class="window-dot"></div>
-                        <div class="window-dot"></div>
-                    </div>
-                    <div class="code">
-                        <div class="code-line"><span style="color: #ff79c6">const</span> developer = {</div>
-                        <div class="code-line">  <span style="color: #50fa7b">name</span>: <span style="color: #f1fa8c">'Odirile Gift Dire'</span>,</div>
-                        <div class="code-line">  <span style="color: #50fa7b">skills</span>: [<span style="color: #f1fa8c">'C#'</span>, <span style="color: #f1fa8c">'JavaScript'</span>, <span style="color: #f1fa8c">'Python'</span>],</div>
-                        <div class="code-line">  <span style="color: #50fa7b">passion</span>: <span style="color: #f1fa8c">'Accessible Technology'</span></div>
-                        <div class="code-line">};</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <div class="cv-download-section">
+      <h3>Looking for my detailed CV?</h3>
+      <p>Download my complete resume with full work history and qualifications.</p>
+      <a href="cv/ODIRILE GIFT DIRE RESUME CV LATEST 2-1.pdf" download class="btn btn-primary btn-large"><span>Download CV</span><span>📥</span></a>
+    </div>
+  </section>
+  <!-- Passcode Modal -->
+<div class="modal" id="passcode-modal" role="dialog" aria-modal="true" aria-hidden="true">
+  <div class="modal-card" role="document">
+    <h3>Enter Passcode</h3>
+    <p>To download my academic transcript.</p>
 
-    <!-- About Section -->
-    <section id="about">
-        <h2 class="section-title">About Me</h2>
-        <div class="about-content">
-            <p>I am a dedicated and resilient Information Technology student currently in my final year of a bachelor's degree, with a proven track record of academic excellence and hands-on experience in both local and international settings.</p>
-            
-            <p>Selected for the prestigious Global Minor program, I studied at four leading European universities, collaborating with diverse teams on innovative projects aimed at empowering people with disabilities in the workplace. Our work included developing a Chrome extension for visually impaired users, a foot mouse for individuals without hands, and a voice recognition navigator.</p>
-            
-            <p>I have gained practical experience working with startups such as Steera App and freelancing for three additional startups, further strengthening my skills in C#, JavaScript, Python, and front-end development. Known for my strong work ethic, adaptability, and collaborative spirit.</p>
-        </div>
-    </section>
+    <label class="sr-only" for="passcode-input">Passcode</label>
+    <input type="password" id="passcode-input" placeholder="Passcode" autocomplete="current-password" />
 
-    <!-- Skills Section -->
-    <section id="skills">
-        <h2 class="section-title">Skills & Technologies</h2>
-        <div class="skills-grid">
-            <div class="skill-card">
-                <div class="skill-icon">💻</div>
-                <h3>C#</h3>
-            </div>
-            <div class="skill-card">
-                <div class="skill-icon">🌐</div>
-                <h3>JavaScript</h3>
-            </div>
-            <div class="skill-card">
-                <div class="skill-icon">🐍</div>
-                <h3>Python</h3>
-            </div>
-            <div class="skill-card">
-                <div class="skill-icon">⚛️</div>
-                <h3>React</h3>
-            </div>
-            <div class="skill-card">
-                <div class="skill-icon">🎨</div>
-                <h3>HTML/CSS</h3>
-            </div>
-            <div class="skill-card">
-                <div class="skill-icon">🗄️</div>
-                <h3>MySQL</h3>
-            </div>
-            <div class="skill-card">
-                <div class="skill-icon">📊</div>
-                <h3>SQL</h3>
-            </div>
-            <div class="skill-card">
-                <div class="skill-icon">🗃️</div>
-                <h3>MSSQL</h3>
-            </div>
-            <div class="skill-card">
-                <div class="skill-icon">🍃</div>
-                <h3>MongoDB</h3>
-            </div>
-            <div class="skill-card">
-                <div class="skill-icon">🔧</div>
-                <h3>.NET</h3>
-            </div>
-            <div class="skill-card">
-                <div class="skill-icon">🌿</div>
-                <h3>Git</h3>
-            </div>
-            <div class="skill-card">
-                <div class="skill-icon">🤖</div>
-                <h3>AI</h3>
-            </div>
-            <div class="skill-card">
-                <div class="skill-icon">🔒</div>
-                <h3>Cybersecurity</h3>
-            </div>
-            <div class="skill-card">
-                <div class="skill-icon">📡</div>
-                <h3>IoT</h3>
-            </div>
-            <div class="skill-card">
-                <div class="skill-icon">🎯</div>
-                <h3>UX/UI</h3>
-            </div>
-            <div class="skill-card">
-                <div class="skill-icon">🐳</div>
-                <h3>Docker</h3>
-            </div>
-        </div>
-    </section>
+    <p class="modal-error" id="passcode-error" role="alert" hidden>Incorrect passcode. Try again.</p>
 
-    <!-- Experience Section -->
-    <section id="experience">
-        <h2 class="section-title">Experience</h2>
-        <div class="timeline">
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <h3>Software Developer</h3>
-                    <h4>Steera App | Johannesburg</h4>
-                    <p class="timeline-date">08/2023 - 09/2024</p>
-                    <p>Contributed to Steera app development, working with Google services, Huawei services, and APIs. Integrated web services, WhatsApp, and USSD functionality.</p>
-                </div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <h3>Software Developer Freelancer</h3>
-                    <h4>Multiple Startups | Johannesburg</h4>
-                    <p class="timeline-date">11/2023 - Present</p>
-                    <p>Oversaw integration of multiple chatbots into client platforms. Automated responses and system functions. Set up API connections and web development.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+    <div class="modal-actions">
+      <button class="btn btn-secondary" id="cancel-passcode">Cancel</button>
+      <button class="btn btn-primary" id="confirm-passcode">Unlock &amp; Download</button>
+    </div>
+  </div>
+</div>
 
-    <!-- Education Section -->
-    <section id="education">
-        <h2 class="section-title">Education</h2>
-        <div class="timeline">
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <h3>Bachelor of Information Technology</h3>
-                    <h4>Belgium campus ITversity | Pretoria</h4>
-                    <p class="timeline-date">Expected: 12/2025</p>
-                </div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <h3>Diploma in Information Technology</h3>
-                    <h4>Belgium campus ITversity | Pretoria</h4>
-                    <p class="timeline-date">Completed: 12/2023 | Cum Laude 70+</p>
-                </div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <h3>International Global Minor Programme</h3>
-                    <h4>4 European Universities</h4>
-                    <p class="timeline-date">01/2024</p>
-                    <ul class="education-list">
-                        <li>Hogeschool PXL, Belgium - AI</li>
-                        <li>Fontys University, Netherlands - Cybersecurity</li>
-                        <li>University of Applied Sciences, Austria - IoT</li>
-                        <li>Universitat de Lleida, Spain - UX/UI</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Contact Section -->
-    <section id="contact">
-        <h2 class="section-title">Get In Touch</h2>
-        <div class="contact-grid">
-            <a href="tel:0745731445" class="contact-card">
-                <div class="contact-icon">📱</div>
-                <h3>Phone</h3>
-                <p>074 573 1445</p>
-            </a>
-            <a href="mailto:Direodirile95@gmail.com" class="contact-card">
-                <div class="contact-icon">✉️</div>
-                <h3>Email</h3>
-                <p>Direodirile95@gmail.com</p>
-            </a>
-            <a href="https://www.linkedin.com/in/odirile-dire-20144a239/" target="_blank" class="contact-card">
-                <div class="contact-icon">💼</div>
-                <h3>LinkedIn</h3>
-                <p>Connect with me</p>
-            </a>
-            <div class="contact-card">
-                <div class="contact-icon">📍</div>
-                <h3>Location</h3>
-                <p>Pretoria,GA</p>
-            </div>
-        </div>
-        
-        <!-- CV Download Section -->
-        <div class="cv-download-section">
-            <h3>Looking for my detailed CV?</h3>
-            <p>Download my complete resume with full work history and qualifications</p>
-            <a href="cv/ODIRILE GIFT DIRE RESUME CV LATEST 2-1.pdf" download class="btn btn-primary btn-large">
-                <span>Download CV</span>
-                <span>📥</span>
-            </a>
-        </div>
-    </section>
+  <footer>
+    <p>&copy; 2025 Odirile Gift Dire. All rights reserved.</p>
+  </footer>
 
-    <footer>
-        <p>&copy; 2025 Odirile Gift Dire. All rights reserved.</p>
-    </footer>
-
-    <script src="script.js"></script>
+  <script src="script.js" defer></script>
 </body>
 </html>
