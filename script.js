@@ -16,7 +16,7 @@ if (mobileMenuToggle && mobileNav) {
     isMenuOpen = !isMenuOpen;
     mobileNav.classList.toggle('active', isMenuOpen);
     mobileMenuToggle.setAttribute('aria-expanded', String(isMenuOpen));
-    // animate burger
+
     mobileMenuToggle.children[0].style.transform = isMenuOpen ? 'rotate(45deg) translateY(7px)' : 'rotate(0) translateY(0)';
     mobileMenuToggle.children[1].style.opacity = isMenuOpen ? '0' : '1';
     mobileMenuToggle.children[2].style.transform = isMenuOpen ? 'rotate(-45deg) translateY(-7px)' : 'rotate(0) translateY(0)';
@@ -34,8 +34,6 @@ if (mobileMenuToggle && mobileNav) {
     });
   });
 }
-
-// Smooth scrolling (offset for fixed nav)
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', (e) => {
     const target = document.querySelector(anchor.getAttribute('href'));
@@ -48,7 +46,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
-// Fade-in on scroll
+
 const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
@@ -63,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (skillsGrid) observer.observe(skillsGrid);
 });
 
-// Typing effect for hero title (respect reduced motion)
+// Typing effect for hero title 
 document.addEventListener('DOMContentLoaded', () => {
   const heroText = document.querySelector('.hero-text h1');
   const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -117,9 +115,7 @@ document.querySelectorAll('.btn-primary').forEach(btn=>{
     btn.style.setProperty('--y', `${e.clientY - r.top}px`);
   });
 });
-/* ===== 2025 code-card: add caret + light animation (already styled) ===== */
-// If you want a typewriter effect inside the code card, uncomment below:
-// (Respects reduced motion)
+
 (function(){
   const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const el = document.getElementById('codeBlock');
@@ -139,7 +135,7 @@ document.querySelectorAll('.btn-primary').forEach(btn=>{
 
 
 const TRANSCRIPT_FILE = 'cv/transcript.pdf'; 
-// Replace this hash with SHA-256 of your passcode 
+
 const PASS_HASH = '1b76032e6b2740cffbe4cec9a8512b87e800482ea3b1291bbe3b365e2fe1bc83';
 
 async function sha256Hex(str){
@@ -186,7 +182,7 @@ async function sha256Hex(str){
     const pass = input.value.trim();
     const hex = await sha256Hex(pass);
     if (hex === PASS_HASH) {
-      // trigger download
+   
       const a = document.createElement('a');
       a.href = TRANSCRIPT_FILE;
       a.download = '';
