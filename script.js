@@ -136,13 +136,11 @@ document.querySelectorAll('.btn-primary').forEach(btn=>{
   setTimeout(type, 400);
 })();
 
-/* ===== Transcript secure download (front-end gating) =====
-   NOTE: Front-end passcodes are obfuscation only. The PDF is public if someone
-   guesses the URL. For real protection, use a serverless function or private cloud link.
-*/
-const TRANSCRIPT_FILE = 'cv/transcript.pdf'; // put your file here
-// Replace this hash with SHA-256 of your passcode (lowercase hex string)
-const PASS_HASH = 'REPLACE_WITH_SHA256_HEX';
+
+
+const TRANSCRIPT_FILE = 'cv/transcript.pdf'; 
+// Replace this hash with SHA-256 of your passcode 
+const PASS_HASH = '1b76032e6b2740cffbe4cec9a8512b87e800482ea3b1291bbe3b365e2fe1bc83';
 
 async function sha256Hex(str){
   const data = new TextEncoder().encode(str);
@@ -150,8 +148,7 @@ async function sha256Hex(str){
   return [...new Uint8Array(digest)].map(b=>b.toString(16).padStart(2,'0')).join('');
 }
 
-// Helper to compute a hash for your passcode (open console and run):
-// sha256Hex('YourPasscode').then(console.log)
+
 
 (function(){
   const openBtn = document.getElementById('download-transcript');
@@ -206,6 +203,7 @@ async function sha256Hex(str){
   confirmBtn.addEventListener('click', tryDownload);
   input.addEventListener('keydown', (e)=>{ if(e.key === 'Enter') tryDownload(); });
 })();
+
 
 
 // Console easter egg
